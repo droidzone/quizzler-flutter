@@ -48,21 +48,11 @@ class _QuizPageState extends State<QuizPage> {
 
   void increment() {
     print('Number of questions is ${quizBrain.totalQuestions()}');
-    questionIndex++;
-    if (questionIndex == quizBrain.totalQuestions()) {
-      questionIndex = 0;
+
+    if (questionIndex < quizBrain.totalQuestions()) {
+      questionIndex++;
     }
   }
-
-//  void answerClicked(bool choice) {
-//    print("Clicked $choice");
-//    if (quizBrain.getQuestionAnswer() == choice) {
-//      addCorrectMark();
-//    } else {
-//      addWrongMark();
-//    }
-//    quizBrain.nextQuestion();
-//  }
 
   void trueClicked() {
     print("Clicked True.");
